@@ -59,6 +59,8 @@ body {
     font-family: var(--font-barlow);
     background-color: var(--color-gray-8);
     line-height: 1;
+    width: 100vw;
+    height: 100vh;
 }
 ol, ul {
     list-style: none;

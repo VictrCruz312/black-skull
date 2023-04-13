@@ -5,13 +5,14 @@ import { BiStar } from "react-icons/bi";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { IoIosClose } from "react-icons/io";
 import logo from "../../assets/logo.png";
+import { HeaderStyled } from "./style";
 
 const Header = () => {
     return (
-        <div>
+        <HeaderStyled>
             <div className="containerInfos">
                 <a href="https://google.com">FALE CONOSCO</a>
-                <div>
+                <div className="noticias">
                     <TbTruck />
                     <p>Frete grátis a partir de R$ 199,90 para todo Brasil</p>
                 </div>
@@ -34,7 +35,7 @@ const Header = () => {
                         <input type="text" placeholder="Buscar" />
                         <button>
                             <BiSearch />
-                            <IoIosClose />
+                            {/* <IoIosClose /> */}
                         </button>
                     </div>
                 </div>
@@ -50,7 +51,7 @@ const Header = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </HeaderStyled>
     );
 };
 
