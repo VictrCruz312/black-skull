@@ -2,6 +2,9 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
 :root {
+    --font-roboto: 'Roboto Condensed', sans-serif;
+    --font-barlow: 'Barlow', sans-serif;
+
     --color-black-1: #0B0B0B;
 
     --color-dark-1: #1C1C1E;
@@ -53,6 +56,7 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 body {
+    font-family: var(--font-barlow);
     background-color: var(--color-gray-8);
     line-height: 1;
 }
