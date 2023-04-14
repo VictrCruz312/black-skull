@@ -6,8 +6,24 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { IoIosClose } from "react-icons/io";
 import logo from "../../assets/logo.png";
 import { HeaderStyled } from "./style";
+import { useRef, useState } from "react";
 
 const Header = () => {
+    const [isFocused, setIsFocused] = useState(false);
+    const [inputValue, setInputValue] = useState("");
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    const focusInput = () => {
+        setIsFocused(true);
+        inputRef.current?.focus();
+    };
+
+    const disfocusInput = () => {
+        setIsFocused(false);
+        setInputValue("");
+        inputRef.current?.blur();
+    };
+
     return (
         <HeaderStyled>
             <div className="containerInfos">
@@ -31,13 +47,18 @@ const Header = () => {
                     <a href="">ASSINATURA</a>
                 </div>
                 <div className="search">
-                    <div className="containerSearch">
-                        <input type="text" placeholder="Buscar" />
-                        <button>
-                            <BiSearch />
-                            {/* <IoIosClose /> */}
-                        </button>
-                    </div>
+                    <input
+                        onClick={() => setIsFocused(true)}
+                        type="text"
+                        placeholder="Buscar"
+                        value={inputValue}
+                        onChange={(e) => setInputValue(e.target.value)}
+                        ref={inputRef}
+                    />
+
+                    <button onClick={isFocused ? disfocusInput : focusInput}>
+                        {isFocused ? <IoIosClose /> : <BiSearch />}
+                    </button>
                 </div>
                 <div className="perfilInfos">
                     <button>
