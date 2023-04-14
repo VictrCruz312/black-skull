@@ -33,8 +33,8 @@ const Footer = () => {
         <FooterStyled>
             <div className="containerInfos">
                 <div className="links">
-                    <div>
-                        <div className="containerSocialMedia">
+                    <div className="section">
+                        <div className="blockSocialMedia">
                             <img src={logo} alt="logo black skull" />
                             <p>Nos siga:</p>
                             <div>
@@ -55,113 +55,126 @@ const Footer = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="containerLinks">
-                            <h2>BLACKSKULL USA</h2>
-                            <div>
-                                <a href="https://google.com">Sobre Nós</a>
-                                <a href="https://google.com">
-                                    Black Skull é confiável?
-                                </a>
-                                <a href="https://google.com">
-                                    Atletas Black Skull
-                                </a>
-                                <a href="https://google.com">Nosso Blog</a>
-                                <a href="https://google.com">
-                                    Seja um Revendedor
-                                </a>
-                                <a href="https://google.com">
-                                    Entre em Contato
-                                </a>
+                        <div className="blockLinks">
+                            <div className="containerLinks">
+                                <h2>BLACKSKULL USA</h2>
+                                <div>
+                                    <a href="https://google.com">Sobre Nós</a>
+                                    <a href="https://google.com">
+                                        Black Skull é confiável?
+                                    </a>
+                                    <a href="https://google.com">
+                                        Atletas Black Skull
+                                    </a>
+                                    <a href="https://google.com">Nosso Blog</a>
+                                    <a href="https://google.com">
+                                        Seja um Revendedor
+                                    </a>
+                                    <a href="https://google.com">
+                                        Entre em Contato
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="containerLinks">
+                                <h2>INSTITUCIONAL</h2>
+                                <div>
+                                    <a href="https://google.com">
+                                        Trocas e Devoluções
+                                    </a>
+                                    <a href="https://google.com">
+                                        Política de Entregas
+                                    </a>
+                                    <a href="https://google.com">
+                                        Política de Privacidade
+                                    </a>
+                                    <a href="https://google.com">
+                                        Política de Cancelamentos
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="containerLinks">
+                                <h2>AFILIADOS</h2>
+                                <div>
+                                    <a href="https://google.com">
+                                        Programa de Afiliados
+                                    </a>
+                                    <a href="https://google.com">
+                                        Desconto para Militares
+                                    </a>
+                                    <a href="https://google.com">
+                                        Benefícios para Profissionais da Saúde
+                                    </a>
+                                    <a href="https://google.com">
+                                        Benefícios para Profs. de Educação
+                                        Física
+                                    </a>
+                                    <a href="https://google.com">Assinaturas</a>
+                                </div>
+                            </div>
+                            <div className="containerIcons">
+                                <div className="list">
+                                    <h2>FORMAS DE PAGAMENTO</h2>
+                                    <div>
+                                        <img
+                                            src={mercadopago}
+                                            alt="icone mercado pago"
+                                        />
+                                        <img src={visa} alt="icone visa" />
+                                        <img
+                                            src={masterCard}
+                                            alt="icone mastercard"
+                                        />
+                                        <img
+                                            src={hipercard}
+                                            alt="icone hipercard"
+                                        />
+                                        <img src={pix} alt="icone pix" />
+                                        <img src={amex} alt="icone amex" />
+                                        <img
+                                            src={dinnersClub}
+                                            alt="icone dinners club"
+                                        />
+                                        <img src={elo} alt="icone elo" />
+                                        <img src={boleto} alt="icone boleto" />
+                                    </div>
+                                </div>
+                                <div className="list">
+                                    <h2>SEGURANÇA</h2>
+                                    <div>
+                                        <img
+                                            src={vtexPCJ}
+                                            alt="icone VTEX e PCJ CERTIFICADO"
+                                        />
+                                        <img src={ebit} alt="icone ebit" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className="containerLinks">
-                            <h2>INSTITUCIONAL</h2>
-                            <div>
-                                <a href="https://google.com">
-                                    Trocas e Devoluções
-                                </a>
-                                <a href="https://google.com">
-                                    Política de Entregas
-                                </a>
-                                <a href="https://google.com">
-                                    Política de Privacidade
-                                </a>
-                                <a href="https://google.com">
-                                    Política de Cancelamentos
-                                </a>
-                            </div>
-                        </div>
-                        <div className="containerLinks">
-                            <h2>AFILIADOS</h2>
-                            <div>
-                                <a href="https://google.com">
-                                    Programa de Afiliados
-                                </a>
-                                <a href="https://google.com">
-                                    Desconto para Militares
-                                </a>
-                                <a href="https://google.com">
-                                    Benefícios para Profissionais da Saúde
-                                </a>
-                                <a href="https://google.com">
-                                    Benefícios para Profs. de Educação Física
-                                </a>
-                                <a href="https://google.com">Assinaturas</a>
-                            </div>
+                        <div className="blockSubscription">
+                            <h2>
+                                Fique por <span>Dentro</span>
+                            </h2>
+                            <p>
+                                Inscreva-se e seja o primeiro a saber sobre as
+                                novidades, promoções e muito mais!
+                            </p>
+                            <form onSubmit={handleSubmit}>
+                                <input
+                                    type="text"
+                                    placeholder="Digite seu nome"
+                                    onChange={(e) => setName(e.target.value)}
+                                    value={name}
+                                />
+                                <input
+                                    type="text"
+                                    placeholder="Digite seu email"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={email}
+                                />
+                                <button type="submit">ENVIAR</button>
+                            </form>
                         </div>
                     </div>
-                    <div className="containerIcons">
-                        <div className="listPayments">
-                            <h2>FORMAS DE PAGAMENTO</h2>
-                            <div>
-                                <img
-                                    src={mercadopago}
-                                    alt="icone mercado pago"
-                                />
-                                <img src={visa} alt="icone visa" />
-                                <img src={masterCard} alt="icone mastercard" />
-                                <img src={hipercard} alt="icone hipercard" />
-                                <img src={pix} alt="icone pix" />
-                                <img src={amex} alt="icone amex" />
-                                <img
-                                    src={dinnersClub}
-                                    alt="icone dinners club"
-                                />
-                                <img src={elo} alt="icone elo" />
-                                <img src={boleto} alt="icone boleto" />
-                            </div>
-                        </div>
-                        <div className="listSeguranca">
-                            <h2>SEGURANÇA</h2>
-                            <img
-                                src={vtexPCJ}
-                                alt="icone VTEX e PCJ CERTIFICADO"
-                            />
-                            <img src={ebit} alt="icone ebit" />
-                        </div>
-                    </div>
-                </div>
-                <div className="subscription">
-                    <h2>Fique por Dentro</h2>
-                    <p>
-                        Inscreva-se e seja o primeiro a saber sobre as
-                        novidades, promoções e muito mais!
-                    </p>
-                    <form onSubmit={handleSubmit}>
-                        <input
-                            type="text"
-                            placeholder="Digite seu nome"
-                            onChange={(e) => setName(e.target.value)}
-                            value={name}
-                        />
-                        <input
-                            type="text"
-                            placeholder="Digite seu email"
-                            onChange={(e) => setEmail(e.target.value)}
-                            value={email}
-                        />
-                        <button type="submit">ENVIAR</button>
-                    </form>
                 </div>
             </div>
             <div className="containerDireitos">
