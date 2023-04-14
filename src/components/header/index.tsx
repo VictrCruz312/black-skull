@@ -26,50 +26,56 @@ const Header = () => {
 
     return (
         <HeaderStyled>
-            <div className="containerInfos">
-                <a href="https://google.com">FALE CONOSCO</a>
-                <div className="noticias">
-                    <TbTruck />
-                    <p>Frete grátis a partir de R$ 199,90 para todo Brasil</p>
+            <div className="header">
+                <div className="containerInfos">
+                    <a href="https://google.com">FALE CONOSCO</a>
+                    <div className="noticias">
+                        <TbTruck />
+                        <p>
+                            Frete grátis a partir de R$ 199,90 para todo Brasil
+                        </p>
+                    </div>
+                    <a href="https://google.com">BLOG.BLACKSKULL</a>
                 </div>
-                <a href="https://google.com">BLOG.BLACKSKULL</a>
-            </div>
-            <div className="containerUtils">
-                <div className="logo">
-                    <img src={logo} alt="logo black skull" />
-                </div>
-                <div className="navigation">
-                    <a href="">CATEGORIAS</a>
-                    <a href="">VESTUARIO</a>
-                    <a href="">OBJETIVOS</a>
-                    <a href="">PROMOÇÕES</a>
-                    <a href="">ATLETAS</a>
-                    <a href="">ASSINATURA</a>
-                </div>
-                <div className="search">
-                    <input
-                        onClick={() => setIsFocused(true)}
-                        type="text"
-                        placeholder="Buscar"
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                        ref={inputRef}
-                    />
+                <div className="containerUtils">
+                    <div className="logo">
+                        <img src={logo} alt="logo black skull" />
+                    </div>
+                    <div className="navigation">
+                        <a href="">CATEGORIAS</a>
+                        <a href="">VESTUARIO</a>
+                        <a href="">OBJETIVOS</a>
+                        <a href="">PROMOÇÕES</a>
+                        <a href="">ATLETAS</a>
+                        <a href="">ASSINATURA</a>
+                    </div>
+                    <div className="search">
+                        <input
+                            onClick={() => setIsFocused(true)}
+                            type="text"
+                            placeholder="Buscar"
+                            value={inputValue}
+                            onChange={(e) => setInputValue(e.target.value)}
+                            ref={inputRef}
+                        />
 
-                    <button onClick={isFocused ? disfocusInput : focusInput}>
-                        {isFocused ? <IoIosClose /> : <BiSearch />}
-                    </button>
-                </div>
-                <div className="perfilInfos">
-                    <button>
-                        <BiUserCircle />
-                    </button>
-                    <button>
-                        <BiStar />
-                    </button>
-                    <button>
-                        <HiOutlineShoppingCart />
-                    </button>
+                        <button
+                            onClick={isFocused ? disfocusInput : focusInput}
+                        >
+                            {isFocused ? <IoIosClose /> : <BiSearch />}
+                        </button>
+                    </div>
+                    <div className="perfilInfos">
+                        <button>
+                            <BiUserCircle />
+                        </button>
+                        <button>
+                            <BiStar />
+                        </button>
+                        <button>
+                            <HiOutlineShoppingCart />
+                        </button>
+                    </div>
                 </div>
             </div>
         </HeaderStyled>
