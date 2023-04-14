@@ -9,12 +9,17 @@ import Section4 from "./components/sections/section4";
 import Section5 from "./components/sections/section5";
 import Section6 from "./components/sections/section6";
 import Section7 from "./components/sections/section7";
+import ScrollTop from "./components/scrollTop";
+import { useRef } from "react";
 
 const App = () => {
+    const topoRef = useRef<HTMLDivElement>(null);
+
     return (
         <>
             <Global />
             <div className="App">
+                <div ref={topoRef}></div>
                 <Header />
                 <Section1 />
                 <Section2 />
@@ -24,6 +29,7 @@ const App = () => {
                 <Section6 />
                 <Section7 />
                 <Footer />
+                <ScrollTop topoRef={topoRef} />
             </div>
         </>
     );
