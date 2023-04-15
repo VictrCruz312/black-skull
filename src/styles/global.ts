@@ -10,6 +10,7 @@ export default createGlobalStyle`
     --color-dark-1: #1C1C1E;
     --color-dark-2: #2C2C2E;
     --color-dark-3: #3A3A3C;
+    --color-dark-3-copy: 58, 58, 60;
 
     --color-gray-1: #9A9A9A;
     --color-gray-2: #CACACA;
