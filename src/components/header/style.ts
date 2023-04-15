@@ -8,12 +8,15 @@ export const HeaderStyled = styled.header`
         bottom: 0;
         right: 0;
         left: 0;
+        z-index: 1000;
+
         display: flex;
         flex-direction: column;
         width: 100vw;
         height: 104px;
 
         background: var(--color-black-1);
+        border-bottom: 1px solid var(--color-dark-3);
 
         .containerInfos {
             display: flex;

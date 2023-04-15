@@ -23,6 +23,11 @@ const Section1 = () => {
                         alt="Homem exercitando com pesos nas mãos"
                     />
                 </li>
+                <div className="locationScroll">
+                    <div className="line focus"></div>
+                    <div className="line"></div>
+                    <div className="line"></div>
+                </div>
             </ul>
         </Section1Styled>
     );
