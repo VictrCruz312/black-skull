@@ -8,6 +8,7 @@ export const ScrollTopStyled = styled.div`
     flex-direction: column;
     align-items: flex-end;
     gap: 10px;
+    z-index: 100;
 
     .scrollTopButton {
         margin: 0;
