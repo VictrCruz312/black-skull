@@ -1,6 +1,5 @@
-import { LocationScrollStyled } from "../../../styles/style";
+import BlockListProducts from "../../BlockListProducts";
 import CardProduct from "../../cards/cardProduct";
-import Carrousel from "../../carrousels/carrousel";
 import { Section3Styled } from "./style";
 
 const Section3 = () => {
@@ -10,18 +9,11 @@ const Section3 = () => {
     }
     return (
         <Section3Styled>
-            <h2 className="subtitle">Lançamentos</h2>
-            <Carrousel>
+            <BlockListProducts subtitle="Lançamentos">
                 {list.map((_, index) => {
                     return <CardProduct key={index} type="size" />;
                 })}
-            </Carrousel>
-            <div className="paddingLocationScroll"></div>
-            <LocationScrollStyled>
-                <div className="line focus"></div>
-                <div className="line"></div>
-                <div className="line"></div>
-            </LocationScrollStyled>
+            </BlockListProducts>
         </Section3Styled>
     );
 };
