@@ -1,5 +1,6 @@
 import { Section1Styled } from "./style";
 import image from "../../../assets/section1/image-1.png";
+import { LocationScrollStyled } from "../../../styles/style";
 
 const Section1 = () => {
     return (
@@ -23,11 +24,11 @@ const Section1 = () => {
                         alt="Homem exercitando com pesos nas mãos"
                     />
                 </li>
-                <div className="locationScroll">
+                <LocationScrollStyled>
                     <div className="line focus"></div>
                     <div className="line"></div>
                     <div className="line"></div>
-                </div>
+                </LocationScrollStyled>
             </ul>
         </Section1Styled>
     );

@@ -11,12 +11,12 @@ export const CarrouselStyled = styled.div`
 
     .arrows {
         position: absolute;
-        top: 73px;
         width: 100vw;
         height: 20px;
 
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 0 40px 0 40px;
 
         button {

@@ -11,6 +11,7 @@ import Section6 from "./components/sections/section6";
 import Section7 from "./components/sections/section7";
 import ScrollTop from "./components/scrollTop";
 import { useRef } from "react";
+import { ContainerSectionsStyled } from "./styles/style";
 
 const App = () => {
     const topoRef = useRef<HTMLDivElement>(null);
@@ -21,13 +22,15 @@ const App = () => {
             <div className="App">
                 <div ref={topoRef}></div>
                 <Header />
-                <Section1 />
-                <Section2 />
-                <Section3 />
-                <Section4 />
-                <Section5 />
-                <Section6 />
-                <Section7 />
+                <ContainerSectionsStyled>
+                    <Section1 />
+                    <Section2 />
+                    <Section3 />
+                    <Section4 />
+                    <Section5 />
+                    <Section6 />
+                    <Section7 />
+                </ContainerSectionsStyled>
                 <Footer />
                 <ScrollTop topoRef={topoRef} />
             </div>
