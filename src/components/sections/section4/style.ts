@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import backgroundImage from "../../../assets/backgroundImages/background-1.png";
 
 export const Section4Styled = styled.div`
     height: 461px;

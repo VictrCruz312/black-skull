@@ -2,7 +2,6 @@ import CardCategory from "../../cards/cardCategory";
 import category from "../../../assets/category/image-1.png";
 import { Section2Styled } from "./style";
 import Carrousel from "../../carrousels/carrousel";
-import CardProduct from "../../cards/cardProduct";
 
 const Section2 = () => {
     let list = [];

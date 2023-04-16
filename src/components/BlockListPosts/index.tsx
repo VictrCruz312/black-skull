@@ -1,4 +1,3 @@
-import { LocationScrollStyled } from "../../styles/style";
 import Carrousel from "../carrousels/carrousel";
 import { BlockListPostsStyled } from "./style";
 
