@@ -12,6 +12,7 @@ import Section7 from "./components/sections/section7";
 import ScrollTop from "./components/scrollTop";
 import { useRef } from "react";
 import { ContainerSectionsStyled } from "./styles/style";
+import Section8 from "./components/sections/section8";
 
 const App = () => {
     const topoRef = useRef<HTMLDivElement>(null);
@@ -30,6 +31,7 @@ const App = () => {
                     <Section5 />
                     <Section6 />
                     <Section7 />
+                    <Section8 />
                 </ContainerSectionsStyled>
                 <Footer />
                 <ScrollTop topoRef={topoRef} />

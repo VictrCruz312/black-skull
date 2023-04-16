@@ -23,6 +23,7 @@ export default createGlobalStyle`
     --color-orange-2: #FFC470;
 
     --color-gradient-dark: linear-gradient(180deg, #3A3A3C 0%, #0B0B0B 101.48%);
+    --color-gradient-dark-1: linear-gradient(213.8deg, #9A9A9A -17.86%, #0B0B0B 73%);
 }
 
 * {
