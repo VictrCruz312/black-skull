@@ -112,4 +112,15 @@ export const Section4Styled = styled.div`
             background: var(--color-orange-2);
         }
     }
+
+    .imageAbsolute {
+        width: 483px;
+        height: 314px;
+        mix-blend-mode: overlay;
+        opacity: 0.6;
+
+        position: absolute;
+        top: 0;
+        right: -20px;
+    }
 `;

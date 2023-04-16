@@ -81,9 +81,11 @@ export const HeaderStyled = styled.header`
 
             .navigation {
                 display: flex;
-                gap: 27px;
+                align-items: center;
 
+                position: relative;
                 padding: 0 43px;
+                height: 100%;
 
                 a {
                     font-family: var(--font-barlow);
@@ -95,7 +97,40 @@ export const HeaderStyled = styled.header`
                     text-align: center;
                     text-transform: uppercase;
 
-                    color: #9a9a9a;
+                    color: var(--color-gray-1);
+
+                    height: 100%;
+                    width: 103px;
+                    text-align: center;
+                    transition: 0.2s;
+                    overflow: hidden;
+                    z-index: 100;
+                    padding-top: 28px;
+                    transition: 0.2s ease-in-out;
+
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    :hover {
+                        background: var(--color-dark-3);
+                        color: var(--color-white);
+                    }
+
+                    :hover .lineEffect {
+                        transform: translateX(0%);
+                    }
+
+                    .lineEffect {
+                        transform: translateX(-80%);
+                        transition: 0.2s ease-in-out;
+
+                        width: 103px;
+                        height: 3px;
+                        background: var(--color-orange-1);
+                        transform: translateX(-100%);
+                    }
                 }
             }
 

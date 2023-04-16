@@ -42,12 +42,30 @@ const Header = () => {
                         <img src={logo} alt="logo black skull" />
                     </div>
                     <div className="navigation">
-                        <a href="">CATEGORIAS</a>
-                        <a href="">VESTUARIO</a>
-                        <a href="">OBJETIVOS</a>
-                        <a href="">PROMOÇÕES</a>
-                        <a href="">ATLETAS</a>
-                        <a href="">ASSINATURA</a>
+                        <a href="">
+                            <p>CATEGORIAS</p>
+                            <span className="lineEffect"></span>
+                        </a>
+                        <a href="">
+                            <p>VESTUARIO</p>
+                            <span className="lineEffect"></span>
+                        </a>
+                        <a href="">
+                            <p>OBJETIVOS</p>
+                            <span className="lineEffect"></span>
+                        </a>
+                        <a href="">
+                            <p>PROMOÇÕES</p>
+                            <span className="lineEffect"></span>
+                        </a>
+                        <a href="">
+                            <p>ATLETAS</p>
+                            <span className="lineEffect"></span>
+                        </a>
+                        <a href="">
+                            <p>ASSINATURA</p>
+                            <span className="lineEffect"></span>
+                        </a>
                     </div>
                     <div className="search">
                         <input
