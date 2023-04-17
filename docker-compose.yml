@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+    production:
+        image: nginx:latest
+        ports:
+            - "8080:80"
+        volumes:
+            - ./dist:/usr/share/nginx/html:ro
+
+    development:
+        image: node:18-alpine
+        volumes:
+            - .:/app
+        working_dir: /app
+        command: yarn dev --host
+        ports:
+            - "5173:5173"
+        environment:
+            - NODE_ENV=development
