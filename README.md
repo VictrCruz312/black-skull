@@ -16,15 +16,15 @@
 
 ## Opcional
 
-Este repositório contém um Dockerfile que pode ser usado para criar uma imagem Docker que suporta ambientes de desenvolvimento e produção para a aplicação.
+Este repositório utiliza o docker-compose que pode ser usado para criar uma imagem Docker que suporta ambientes de desenvolvimento e produção para a aplicação.
 
 ## Pré-requisitos
 
-Para usar esta imagem Docker, você precisará ter os seguintes softwares instalados em seu sistema:
+Para usar, você precisará ter os seguintes softwares instalados em seu sistema:
 
 - Docker
+- Docker-compose
 - Yarn
-- NodeJS 18.x ou superior
 
 ## Como usar
 
@@ -35,30 +35,36 @@ git clone git@github.com:VictrCruz312/black-skull.git
 cd black-skull
 ```
 
-Em seguida, execute o seguinte comando para construir a imagem Docker:
+## Executando em ambiente de desenvolvimento e produção ao mesmo tempo
+
+Para executar a aplicação em um ambiente de desenvolvimento e produção, execute o seguinte comando:
 
 ```sh
-docker build -t black-skull .
+docker compose up
+#ou
+docker-compose up
 ```
-
-Isso criará uma imagem Docker com o nome black-skull.
 
 ## Executando em ambiente de desenvolvimento
 
 Para executar a aplicação em um ambiente de desenvolvimento, execute o seguinte comando:
 
 ```sh
-docker run -it -p 3000:3000 black-skull
+docker compose up development
+#ou
+docker-compose up development
 ```
 
-Isso iniciará o servidor de desenvolvimento da aplicação React na porta 3000 do seu computador. Você poderá acessar a aplicação em seu navegador visitando o endereço [http://localhost:3000](http://localhost:3000)
+Isso iniciará o servidor de desenvolvimento da aplicação React na porta 5173 do seu computador. Você poderá acessar a aplicação em seu navegador visitando o endereço [http://localhost:5173](http://localhost:5173)
 
 ## Executando em ambiente de produção
 
 Para executar a aplicação em um ambiente de produção, execute o seguinte comando:
 
 ```sh
-docker run -d -p 80:80 black-skull
+docker compose up production
+#ou
+docker-compose up production
 ```
 
-Isso iniciará o servidor da aplicação React em um contêiner Docker na porta 80 do seu computador. Você poderá acessar a aplicação em seu navegador visitando o endereço [http://localhost:8080](http://localhost:8080)
+Isso iniciará o servidor da aplicação React em um contêiner Docker na porta 8080 do seu computador. Você poderá acessar a aplicação em seu navegador visitando o endereço [http://localhost:8080](http://localhost:8080)
